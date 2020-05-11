@@ -38,14 +38,14 @@
             android:inputType="textPassword"/>
 
         <Button
-            android:id="@+id/buttonregister"
+            android:id="@+id/button_register"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="SIGN UP"
             android:layout_margin="16dp"/>
 
         <TextView
-            android:id="@+id/loginbutton"
+            android:id="@+id/login_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="10sp"

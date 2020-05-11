@@ -17,5 +17,6 @@ class LoginActivity : AppCompatActivity() {
     private fun RegisterPage() {
         val intent = Intent(this,RegisterActivity::class.java)
         startActivity(intent)
+        finish()
     }
 }
