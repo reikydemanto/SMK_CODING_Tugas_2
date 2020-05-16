@@ -15,7 +15,7 @@ import com.example.smk_coding_tugas_2.R
 import data.DonorService
 import dismissLoading
 import httpClient
-import kotlinx.android.synthetic.main.fragment_scorers.*
+import kotlinx.android.synthetic.main.fragment_jadwal_donor.*
 import showLoading
 import tampilToast
 import retrofit2.Call
@@ -34,7 +34,7 @@ class JadwalDonorFragment: Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_scorers,container,false)
+        return inflater.inflate(R.layout.fragment_jadwal_donor,container,false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
