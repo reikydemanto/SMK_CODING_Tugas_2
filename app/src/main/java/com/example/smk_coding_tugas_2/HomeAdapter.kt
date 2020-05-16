@@ -11,7 +11,7 @@ class HomeAdapter(fragmentActivity: FragmentActivity): FragmentStateAdapter(frag
     override fun createFragment(position: Int): Fragment {
         when(position){
             0->{return LeagueFragment()}
-            1->{return ScorersFragment()}
+            1->{return JadwalDonorFragment()}
             2->{return ClubFragment()}
             else->{
                 return LeagueFragment()
