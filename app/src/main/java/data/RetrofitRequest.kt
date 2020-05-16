@@ -17,7 +17,7 @@ fun httpClient(): OkHttpClient {
 inline fun <reified T> apiRequest(okHttpClient: OkHttpClient): T {
     val gson = GsonBuilder().create()
     val retrofit = Retrofit.Builder()
-        .baseUrl("https://api.football-data.org/")
+        .baseUrl("https://sites.google.com/macros/")
         .client(okHttpClient)
         .addConverterFactory(GsonConverterFactory.create(gson))
         .build()
