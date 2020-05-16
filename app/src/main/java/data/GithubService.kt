@@ -1,4 +1,4 @@
-import com.example.smk_coding_tugas_2.GithubUserItem
+import com.example.smk_coding_tugas_2.modul.GithubUserItem
 import retrofit2.Call
 import retrofit2.http.GET
 interface GithubService {

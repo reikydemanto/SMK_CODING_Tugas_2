@@ -1,10 +1,10 @@
-package com.example.smk_coding_tugas_2
+package com.example.smk_coding_tugas_2.activity
 
-import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import com.example.smk_coding_tugas_2.R
 import kotlinx.android.synthetic.main.activity_register.*
 
 class RegisterActivity : AppCompatActivity() {
@@ -43,7 +43,8 @@ class RegisterActivity : AppCompatActivity() {
     }
 
     private fun LoginPage() {
-        val intent = Intent(this,LoginActivity::class.java)
+        val intent = Intent(this,
+            LoginActivity::class.java)
         startActivity(intent)
         finish()
     }

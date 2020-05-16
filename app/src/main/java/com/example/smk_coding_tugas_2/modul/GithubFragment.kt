@@ -1,4 +1,4 @@
-package com.example.smk_coding_tugas_2
+package com.example.smk_coding_tugas_2.modul
 
 import GithubService
 import GithubUserAdapter
@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import apiRequest
+import com.example.smk_coding_tugas_2.R
 import dismissLoading
 import httpClient
 import kotlinx.android.synthetic.main.fragment_github.*

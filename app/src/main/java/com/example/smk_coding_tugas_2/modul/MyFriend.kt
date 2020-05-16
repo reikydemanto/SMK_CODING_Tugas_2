@@ -1,4 +1,4 @@
-package com.example.smk_coding_tugas_2
+package com.example.smk_coding_tugas_2.modul
 
 data class MyFriend (
     val nama : String,

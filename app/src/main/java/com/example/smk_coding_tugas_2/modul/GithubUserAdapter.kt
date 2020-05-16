@@ -4,7 +4,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.example.smk_coding_tugas_2.GithubUserItem
+import com.example.smk_coding_tugas_2.modul.GithubUserItem
 import com.example.smk_coding_tugas_2.R
 import kotlinx.android.extensions.LayoutContainer
 import kotlinx.android.synthetic.main.github_user_item.*

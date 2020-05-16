@@ -1,22 +1,27 @@
-package com.example.smk_coding_tugas_2
+package com.example.smk_coding_tugas_2.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.core.content.res.ResourcesCompat
+import com.example.smk_coding_tugas_2.R
+import com.example.smk_coding_tugas_2.adapter.HomeAdapter
 import com.google.android.material.tabs.TabLayoutMediator
 import kotlinx.android.synthetic.main.activity_main.*
-import java.util.*
 
-class MainActivity : AppCompatActivity() {
+class HomeActivity : AppCompatActivity() {
 
-    val menuTeks = arrayOf("Teman","Github","Profile")
-    val menuIcon = arrayOf(R.drawable.ic_home,R.drawable.ic_add,R.drawable.ic_profile)
+    val menuTeks = arrayOf("League","Jadwal Donor","Club")
+    val menuIcon = arrayOf(
+        R.drawable.ic_league,
+        R.drawable.ic_schedule,
+        R.drawable.ic_club
+    )
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_home)
 
-        val adapter = ViewPagerAdapter(this)
+        val adapter = HomeAdapter(this)
         view_pager.setAdapter(adapter)
         TabLayoutMediator(tab_layout ,view_pager,
             TabLayoutMediator.TabConfigurationStrategy { tab, position ->

@@ -1,4 +1,4 @@
-package com.example.smk_coding_tugas_2
+package com.example.smk_coding_tugas_2.fragment
 
 import android.os.Bundle
 import android.util.Log
@@ -8,6 +8,10 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import apiRequest
+import com.example.smk_coding_tugas_2.dataclass.Data
+import com.example.smk_coding_tugas_2.dataclass.JadwalDonoDarahData
+import com.example.smk_coding_tugas_2.adapter.JadwalDonorAdapter
+import com.example.smk_coding_tugas_2.R
 import data.DonorService
 import dismissLoading
 import httpClient
@@ -17,7 +21,6 @@ import tampilToast
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import kotlin.math.log
 
 
 class JadwalDonorFragment: Fragment() {
@@ -74,10 +77,14 @@ class JadwalDonorFragment: Fragment() {
     }
     private fun tampilJadwalDonor(jadwalDonor: List<Data>) {
         listJadwalDonor.layoutManager = LinearLayoutManager(context)
-        listJadwalDonor.adapter = JadwalDonorAdapter(context!!, jadwalDonor) {
-            val githubUser = it
-            tampilToast(context!!, githubUser.instansi)
-        }
+        listJadwalDonor.adapter =
+            JadwalDonorAdapter(
+                context!!,
+                jadwalDonor
+            ) {
+                val githubUser = it
+                tampilToast(context!!, githubUser.instansi)
+            }
     }
 
 }

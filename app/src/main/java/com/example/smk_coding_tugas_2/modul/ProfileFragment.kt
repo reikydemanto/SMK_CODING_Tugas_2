@@ -1,10 +1,11 @@
-package com.example.smk_coding_tugas_2
+package com.example.smk_coding_tugas_2.modul
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.example.smk_coding_tugas_2.R
 
 class ProfileFragment: Fragment() {
 
