@@ -30,6 +30,9 @@ List<Data>, private val listener: (Data)-> Unit) :
         RecyclerView.ViewHolder(containerView), LayoutContainer {
         fun bindItem(item: Data, listener: (Data) -> Unit) {
             txtInstansi.text = item.instansi
+            txtAlamat.text = item.alamat
+            txtJam.text = item.jam
+            txtKuota.text = item.rencanaDonor
             containerView.setOnClickListener { listener(item) }
         }
     }
