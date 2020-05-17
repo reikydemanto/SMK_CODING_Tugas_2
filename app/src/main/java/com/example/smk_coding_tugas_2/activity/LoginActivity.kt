@@ -13,7 +13,6 @@ import com.android.volley.toolbox.Volley
 import com.example.smk_coding_tugas_2.R
 import com.example.smk_coding_tugas_2.encryptMd5
 import kotlinx.android.synthetic.main.activity_login.*
-import java.lang.reflect.Method
 import java.math.BigInteger
 
 class LoginActivity : AppCompatActivity() {
@@ -31,7 +30,7 @@ class LoginActivity : AppCompatActivity() {
 
         val id_user = idUser
         if (id_user != "null") {
-            gotoCourseActivity()
+            gotoHomeActivity()
         }
 
         buttonlogin.setOnClickListener { btnMD5() }
@@ -56,11 +55,11 @@ class LoginActivity : AppCompatActivity() {
         } else if(txtpassword!!.text.toString().isEmpty()){
             txtpassword.error = "Harap isi password"
         }else {
-            login()
+            LoginAction()
         }
     }
 
-    private fun login() {
+    private fun LoginAction() {
         progressDialog!!.setMessage("Login Process...")
         showDialog()
 
@@ -71,7 +70,7 @@ class LoginActivity : AppCompatActivity() {
                     hideDialog()
                     val id = response.split(";").toTypedArray()[1]
                     setPreference(id)
-                    gotoCourseActivity()
+                    gotoHomeActivity()
                 } else {
                     hideDialog()
                     Toast.makeText(applicationContext,"Gagal Login",Toast.LENGTH_LONG).show()
@@ -91,7 +90,7 @@ class LoginActivity : AppCompatActivity() {
         Volley.newRequestQueue(this).add(stringRequest)
     }
 
-    private fun gotoCourseActivity() {
+    private fun gotoHomeActivity() {
         val intent = Intent(applicationContext, HomeActivity::class.java)
         startActivity(intent)
         finish()
